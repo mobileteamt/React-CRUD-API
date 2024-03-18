@@ -8,12 +8,13 @@ import List from './components/List';
 import Blog from './components/Blog';
 import Create from './components/Create';
 import Update from './components/Update';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
       <Header/>    
-      <Container>
+      <Container className="main">
         <Row>
           <Col>
             <h3 className="text-center pt-4">CRUD using React</h3>
@@ -31,6 +32,7 @@ function App() {
           </BrowserRouter>
         </Row>
       </Container>
+      <Footer/>
     </>
   );
 }

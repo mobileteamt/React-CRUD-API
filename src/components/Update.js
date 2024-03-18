@@ -41,13 +41,8 @@ export default function Update() {
         e.preventDefault();
         const payload = {
             name: name,
-            description: description,
-            status: status
+            description: description
         };
-        
-      
-
-        // return false;
         
         fetch(updateURL,{
             method: 'PUT',
