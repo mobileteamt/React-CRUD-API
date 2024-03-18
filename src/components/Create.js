@@ -11,6 +11,7 @@ export default function Create() {
 
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
+    const [status, setStatus] = useState("enable");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -31,7 +32,8 @@ export default function Create() {
         
         const payload = {
             name: name,
-            description: description
+            description: description,
+            status: status
         };
 
         fetch(baseURL + "blog",{
@@ -69,6 +71,29 @@ export default function Create() {
                 <Form.Label>Blog Description</Form.Label>
                 <Form.Control as="textarea" placeholder="Enter blog description" rows={3} onChange={(e)=>{setDescription(e.target.value)}} value={description}/>
             </Form.Group>
+            {['radio'].map((type) => (
+                <div key={`inline-${type}`} className="mb-3">
+                    <Form.Check
+                        inline
+                        label="Enable"
+                        name="status"
+                        type={type}
+                        id={`inline-${type}-1`}
+                        value="enable"
+                        onChange={(e)=>{setStatus(e.target.value)}}
+                        defaultChecked={true}
+                    />
+                    <Form.Check
+                        inline
+                        label="Disable"
+                        name="status"
+                        type={type}
+                        id={`inline-${type}-2`}
+                        value="disable"
+                        onChange={(e)=>{setStatus(e.target.value)}}
+                    />
+                </div>
+            ))}
             <Button variant="primary" type="submit" className="btn btn-success">Create</Button>
             <Link to="/home" className="btn btn-secondary mx-2">Back</Link>
         </Form>

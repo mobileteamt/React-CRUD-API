@@ -87,6 +87,7 @@ export default function List() {
                 <tr>
                     <th>ID</th>
                     <th>Title</th>
+                    <th>Status</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -97,6 +98,7 @@ export default function List() {
                             <tr key={index}>
                                 <td>{obj.id}</td>
                                 <td>{obj.name}</td>
+                                <td>{obj.status}</td>
                                 <td>
                                     <Link to={`/blog/${obj.id}`} type="button" className="btn btn-sm btn-success mx-1">View</Link>
                                     <Link to={`/update/${obj.id}`} type="button" className="btn btn-sm btn-info mx-1 text-white">Edit</Link>
