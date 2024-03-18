@@ -1,3 +1,3 @@
 # React CRUD App
 
-Manage CRUD operation in react for add/update/delete/view Blogs. This app also providing UI to manage CRUD operations. You need to set your api baseURL in src/config.js file.
+Manage CRUD operations in React for add, update, delete, or view blogs. This app also provides a UI to manage CRUD operations. You need to set your API base URL in the src/config.js file.
