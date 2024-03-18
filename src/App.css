@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.headings{
+  padding-left: 0px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.heading-multi{
+  padding: 0px 0px 10px 0px;
+}
+.form-common{
+  padding-left: 0px;
+}
+.text-justify{
+  text-align: justify;
+}
+.loader{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #b4adad;
+  opacity: 0.8;
+}
