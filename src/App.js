@@ -13,25 +13,19 @@ import Footer from './components/Footer';
 function App() {
   return (
     <>
-      <Header/>    
-      <Container className="main">
-        <Row>
-          <Col>
-            <h3 className="text-center pt-4">CRUD using React</h3>
-          </Col>
-        </Row>
-        <Row>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<List/>}></Route>
-              <Route path="/home" element={<List/>}></Route>
-              <Route path="/blog/:id" element={<Blog/>}></Route>
-              <Route path="/create" element={<Create/>}></Route>
-              <Route path="/update/:id" element={<Update/>}></Route>
-            </Routes>
-          </BrowserRouter>
-        </Row>
-      </Container>
+      <Header/>
+      <div className="container main">
+        <h3 className="text-center pt-4">CRUD using React</h3>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<List/>}></Route>
+            <Route path="/home" element={<List/>}></Route>
+            <Route path="/blog/:id" element={<Blog/>}></Route>
+            <Route path="/create" element={<Create/>}></Route>
+            <Route path="/update/:id" element={<Update/>}></Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
       <Footer/>
     </>
   );

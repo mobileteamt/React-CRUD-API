@@ -39,6 +39,22 @@ export default function Update() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        if(name == ''){
+            Swal.fire({
+                icon: "error",
+                text: "Blog name is required.",
+            });
+            return false;
+        }
+        if(description == ''){
+            Swal.fire({
+                icon: "error",
+                text: "Blog description is required.",
+            });
+            return false;
+        }
+
         const payload = {
             name: name,
             description: description
